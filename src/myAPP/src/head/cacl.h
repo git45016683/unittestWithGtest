@@ -3,8 +3,9 @@
 
 #include <string>
 using namespace std;
+#include "gtest/gtest_prod.h"
 
-#define PRIVATE_METHOD_TEST 0
+#define PRIVATE_METHOD_TEST 1
 
 class Calculate {
 public:
