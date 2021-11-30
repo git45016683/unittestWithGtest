@@ -35,3 +35,13 @@ LIBS += -L../../src/gtest/lib \
 -lgmock \
 -lgtest \
 -lpthread
+
+# change private to public before build
+extralib.target = extra
+extralib.commands = echo "define private public for private method test..."; \
+                        ./callPY.sh 1
+extralib.depends =
+QMAKE_EXTRA_TARGETS += extralib
+PRE_TARGETDEPS = extra
+
+
